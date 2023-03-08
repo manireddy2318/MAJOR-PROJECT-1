@@ -1,0 +1,27 @@
+
+import pandas as pd
+
+df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv', sep=';')
+df
+from sklearn.preprocessing import StandardScaler
+
+X = df.drop('quality', axis=1)
+y = df['quality']
+
+scaler = StandardScaler()
+X = scaler.fit_transform(X)
+#CREATE 4 VARIABLES AS X_train, X_test, y_train, y_test
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+#SELECT SUITABLE REGRESSION/CLASSIFIER
+from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier(n_estimators=100)
+#FIT THE MODEL
+model.fit(X_train, y_train)
+from sklearn.metrics import accuracy_score
+
+#PREDICT THE VALUES BY USING X-VALUES
+y_pred = model.predict(X)
