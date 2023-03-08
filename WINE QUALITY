@@ -1,0 +1,22 @@
+URL  "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv"
+DATASET:
+df.info()#information of URL
+    <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4898 entries, 0 to 4897
+Data columns (total 12 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   fixed acidity         4898 non-null   float64
+ 1   volatile acidity      4898 non-null   float64
+ 2   citric acid           4898 non-null   float64
+ 3   residual sugar        4898 non-null   float64
+ 4   chlorides             4898 non-null   float64
+ 5   free sulfur dioxide   4898 non-null   float64
+ 6   total sulfur dioxide  4898 non-null   float64
+ 7   density               4898 non-null   float64
+ 8   pH                    4898 non-null   float64
+ 9   sulphates             4898 non-null   float64
+ 10  alcohol               4898 non-null   float64
+ 11  quality               4898 non-null   int64  
+dtypes: float64(11), int64(1)
+memory usage: 459.3 KB
